@@ -23,7 +23,7 @@
             primary: "#000000",
             secondary: "#4C4AF3", // Purple color
             accent: "#E5F940", // Lime green color
-            tertiary: "#FF7F36", // New vibrant orange color
+            tertiary: "#FF7F36", // Orange color
             darkgray: "#2D2D34", // Dark gray color for menu backgrounds
           },
           fontFamily: {
@@ -176,9 +176,11 @@
               <!-- Left panel - Menu items -->
               <div class="projects-menu" id="projectsMenu">
                 <!-- Menu items - Each associated with a different color -->
-                <div class="menu-item active" data-project="arianne" data-color="secondary">
+                <div class="menu-item active" data-project="arianne" data-color="terziary">
                     <div class="project-category pl-2 mb-1">Piattaforma Sanitaria</div>
-                  <div class="project-title title-secondary">Arianne</div>
+                  <div class="project-title">
+                    <img src="imgs/logo_arianne.svg" alt="Arianne Logo" class="h-12 w-auto" style="filter: invert(47%) sepia(99%) saturate(1000%) hue-rotate(330deg) brightness(100%) contrast(100%);" />
+                  </div>
                 </div>
                 
                 <div class="menu-item" data-project="esg-quest" data-color="accent">
@@ -186,16 +188,16 @@
                   <div class="project-title title-accent">ESG Quest</div>
                 </div>
                 
-                <div class="menu-item" data-project="other-projects" data-color="tertiary">
+                <div class="menu-item" data-project="other-projects" data-color="secondary">
                     <div class="project-category pl-2 mb-1">Laboratorio di Innovazione</div>
-                    <div class="project-title title-tertiary">Altri Progetti</div>
+                    <div class="project-title title-secondary">Altri Progetti</div>
                 </div>
               </div>
               
               <!-- Right panel - Content panels -->
               <div class="projects-content">
                 <!-- Arianne content panel -->
-                <div class="content-panel panel-secondary active" id="arianne">
+                <div class="content-panel panel-tertiary active" id="arianne">
                   <div class="max-w-xl">              
                     <p class="text-lg mb-4 leading-relaxed">
                         Arianne è la nostra piattaforma sanitaria di punta, progettata per rivoluzionare l'interazione tra terapisti e professionisti sanitari con i loro pazienti. La piattaforma offre una suite completa di strumenti per le valutazioni diagnostiche, la pianificazione del trattamento e il monitoraggio del progresso.
@@ -218,7 +220,7 @@
                 </div>
                 
                 <!-- Other Projects content panel -->
-                <div class="content-panel panel-tertiary" id="other-projects">
+                <div class="content-panel panel-secondary" id="other-projects">
                   <div class="max-w-xl">
                       <div class="project-category pl-2 mb-1">Laboratorio di Innovazione</div>
                     

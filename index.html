@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhattaData</title>
+  <!-- Font imports - Montserrat with various weights for typography hierarchy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS for utility-first styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind configuration - extending the default theme with custom colors and fonts
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#000000",
+            secondary: "#4C4AF3", // Purple color
+            accent: "#E5F940", // Lime green color
+            tertiary: "#FF7F36", // New vibrant orange color
+            darkgray: "#2D2D34", // Dark gray color for menu backgrounds
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white">
+  <!-- ======================================
+       Animated Background - Floating Blobs
+       Fixed position covering entire viewport with animated gradient shapes
+       ====================================== -->
+  <div class="blob-container">
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-green"></div>
+    <div class="blob blob-orange"></div>
+  </div>
+
+  <!-- ======================================
+       Navigation Header
+       Fixed position with glassmorphism effect and gradient branding
+       ====================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-6 px-4">
+    <div class="container mx-auto flex flex-col items-center justify-between">
+      <!-- Brand logo with gradient text effect -->
+      <a href="#hero" class="text-2xl font-montserrat font-bold gradient-text mb-4">
+        WHATTADATA
+      </a>
+      
+      <!-- Main navigation with glassmorphism effect -->
+      <nav class="glassmorphism rounded-full px-8 py-3">
+        <ul class="flex space-x-12">
+          <li><a href="#about" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Chi Siamo</a></li>
+          <li><a href="#projects" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Progetti</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================
+       Hero Section
+       Main landing area with animated typewriter effect and CTA
+       ====================================== -->
+  <section id="hero" class="section flex flex-col justify-end overflow-hidden relative">
+    <div class="container mx-auto px-4 pb-24 md:pb-32">
+      <!-- Hero content - Positioned at the bottom -->
+        <!-- Left column - Main headline with typewriter effect -->
+        <div class="space-y-6 relative z-10">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <span class="text-gray-900">Potenziamo</span>
+            <br />
+            <span class="text-gray-400 font-normal">
+              <span class="typewriter-container">
+                <span id="typewriter" class="typewriter-text"></span>
+                <span class="typewriter-cursor"></span>
+              </span>
+            </span>
+            <br />
+            <span class="text-gray-900">con soluzioni innovative</span>
+            <br />
+            <span class="text-gray-900">basate sui dati</span>
+          </h1>
+        </div>
+    </div>
+    
+    <!-- Scroll down button - Positioned at the bottom center of the hero section -->
+    <div class="absolute bottom-8 left-0 right-0 flex justify-center z-10">
+      <a href="#about" class="scroll-down-btn glassmorphism rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 hover:bg-white hover:bg-opacity-30 focus:outline-none" aria-label="Scroll to About section">
+        <i class="ri-arrow-down-line text-gray-800 text-xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======================================
+       About Section
+       Company information and value proposition with gradient background
+       ====================================== -->
+<section id="about" class="about-section py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold mb-8 text-center">Chi Siamo</h2>
+      
+      <div class="flex flex-col md:flex-row items-center gap-8 mb-10">
+        <!-- University Logo -->
+        <div class="w-full md:w-1/3 flex justify-center">
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logoist_3.jpg-sL6XJ1ShJ878Y7tU387a7ZJqPlcbWI.jpeg" 
+              alt="University of Milano-Bicocca Logo" 
+              class="w-full max-w-[200px] h-auto"
+            />
+        </div>
+        
+        <!-- About Text -->
+        <div class="w-full md:w-2/3">
+          <h3 class="text-2xl font-semibold mb-3">Una Spin-off Universitaria</h3>
+          <p class="text-lg mb-4">
+            WhattaData è una spin-off dell'<span class="font-medium">Università di Milano-Bicocca</span>, che porta l'eccellenza accademica e la ricerca di frontiera nel mondo delle imprese. Il nostro team di appassionati scienziati dei dati e designer è dedicato a supportare le imprese nella crescita attraverso soluzioni innovative basate sui dati.
+          </p>
+          <p class="text-lg">
+            Il nostro modello di abbonamento rende accessibili le analisi professionali dei dati e il design per le imprese di tutte le dimensioni, unendo rigore accademico con applicazioni pratiche del mondo delle imprese.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Key Values -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div class="bg-white bg-opacity-50 p-6 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-secondary bg-opacity-20">
+            <i class="ri-lightbulb-line text-secondary text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Eccellenza Accademica</h3>
+          <p>Portiamo metodologie basate sulla ricerca e approcci innovativi per affrontare le sfide aziendali complesse.</p>
+        </div>
+        
+        <div class="bg-white bg-opacity-50 p-6 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-tertiary bg-opacity-20">
+            <i class="ri-team-line text-tertiary text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Team di Esperti</h3>
+          <p>Il nostro team eterogeneo unisce ricercatori accademici, professionisti del settore e designer creativi.</p>
+        </div>
+        
+        <div class="bg-white bg-opacity-50 p-6 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent bg-opacity-20">
+            <i class="ri-line-chart-line text-xl" style="color: #B8C932;"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Risultati Basati sui Dati</h3>
+          <p>Trasformiamo i dati complessi in informazioni azionabili che guidano la crescita misurabile delle imprese.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ======================================
+       Projects Section
+       Interactive split-panel with left menu and right content
+       ====================================== -->
+       <section id="projects" class="projects-section py-16">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto mb-16">
+            <h2 class="text-4xl font-bold mb-8 text-center">Progetti</h2>
+            
+
+          </div>
+        </div>
+      </section>
+
+  <!-- ======================================
+       Team Section
+       Displays team members with Apple Intelligence-style glow effect
+       ====================================== -->
+       <section id="team" class="py-16 content-section">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold mb-12 text-center">Il Nostro Team</h2>
+          <div class="max-w-4xl mx-auto mb-12 text-center">
+            <p class="text-lg max-w-2xl mx-auto">
+              Le persone dietro WhattaData uniscono l'eccellenza accademica con l'esperienza del settore per trasformare i dati complessi in informazioni azionabili.
+            </p>
+          </div>
+          
+          <div class="team-grid max-w-7xl mx-auto">
+            <!-- Team Member 1 -->
+            <div class="team-card bg-white bg-opacity-50 p-4 rounded-lg text-center shadow-sm">
+              <div class="member-image-container" tabindex="0">
+                <div class="member-image">
+                  <img src="https://placehold.co/400x225/CCCCCC/f5f5f5?text=DC&opacity=0.7" alt="David Chierefato" aria-hidden="false">
+                </div>
+              </div>
+              <div class="member-info">
+                <h3 class="text-lg font-semibold mb-1">David Chierefato</h3>
+                <p class="text-sm mb-2">CEO</p>
+                <p class="member-bio">Dottore in Economia e Commercio con 10 anni di esperienza in analisi predittiva e soluzioni AI.</p>
+              </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-card bg-white bg-opacity-50 p-4 rounded-lg text-center shadow-sm">
+              <div class="member-image-container" tabindex="0">
+                <div class="member-image">
+                  <img src="https://placehold.co/400x225/CCCCCC/f5f5f5?text=GC&opacity=0.7" alt="Gianluigi Ciufo" aria-hidden="false">
+                </div>
+              </div>
+              <div class="member-info">
+                <h3 class="text-lg font-semibold mb-1">Gianluigi Ciufo</h3>
+                <p class="text-sm mb-2">Responsabile Sviluppo Business</p>
+                <p class="member-bio">Si occupa dello sviluppo del business, delle partnership strategiche e dell'espansione di mercato.</p>
+              </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-card bg-white bg-opacity-50 p-4 rounded-lg text-center shadow-sm">
+              <div class="member-image-container" tabindex="0">
+                <div class="member-image">
+                  <img src="https://placehold.co/400x225/CCCCCC/f5f5f5?text=MC&opacity=0.7" alt="Marco Cremaschi" aria-hidden="false">
+                </div>
+              </div>
+              <div class="member-info">
+                <h3 class="text-lg font-semibold mb-1">Marco Cremaschi</h3>
+                <p class="text-sm mb-2">CTO</p>
+                <p class="member-bio">Si occupa dello sviluppo tecnologico e della gestione del team tecnico.</p>
+              </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="team-card bg-white bg-opacity-50 p-4 rounded-lg text-center shadow-sm">
+              <div class="member-image-container" tabindex="0">
+                <div class="member-image">
+                  <img src="https://placehold.co/400x225/CCCCCC/f5f5f5?text=FD&opacity=0.7" alt="Fabio D'Adda" aria-hidden="false">
+                </div>
+              </div>
+              <div class="member-info">
+                <h3 class="text-lg font-semibold mb-1">Fabio D'Adda</h3>
+                <p class="text-sm mb-2">Esperto AI</p>
+                <p class="member-bio">Si occupa dello sviluppo di soluzioni basate su intelligenza artificiale e machine learning.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- CTA Section -->
+          <div class="text-center mt-16">
+            <p class="text-lg mb-6">Interessato a unirti al nostro team?</p>
+            <a href="mailto:marco.cremaschi@unimib.it?subject=Candidatura%20WhattaData" class="inline-block px-6 py-3 rounded-full bg-secondary text-white font-medium hover:bg-opacity-90 transition-colors duration-300">
+              Scrivici una mail
+            </a>
+          </div>
+        </div>
+      </section>
+
+  <!-- ======================================
+       JavaScript Functionality
+       ====================================== -->
+  
+  <!-- Typewriter Effect Script - Animates text typing and deleting in the hero section -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize variables for typewriter effect
+      const typewriterElement = document.getElementById('typewriter');
+      const phrases = ['Salute e Finanza', 'l\'Analisi dei Dati', 'la Business Intelligence', 'la Tecnologia Finanziaria'];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 100; // Base typing speed in milliseconds
+      
+      // Main typewriter function - handles typing, deleting, and transitions between phrases
+      function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        // If deleting, remove a character, otherwise add a character
+        if (isDeleting) {
+          typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = 50; // Faster when deleting
+        } else {
+          typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 100; // Normal speed when typing
+        }
+        
+        // If we've completed typing the current phrase
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          // Pause at the end of typing
+          isDeleting = true;
+          typingSpeed = 1000; // Pause before starting to delete
+        } 
+        // If we've deleted the entire phrase
+        else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          // Move to the next phrase
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          // Pause before typing the next phrase
+          typingSpeed = 500;
+        }
+        
+        // Add slight speed variation for a more natural typing effect
+        const randomSpeed = Math.random() * 50 - 25;
+        
+        // Schedule the next update
+        setTimeout(typeEffect, typingSpeed + randomSpeed);
+      }
+      
+      // Start the typewriter effect
+      typeEffect();
+    });
+  </script>
+
+  <!-- Projects Section Interaction - Handles menu item selection and content panel transitions -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all menu items and content panels
+      const menuItems = document.querySelectorAll('.menu-item');
+      const contentPanels = document.querySelectorAll('.content-panel');
+      const menuContainer = document.getElementById('projectsMenu');
+      
+      // Set initial positions for menu items
+      positionMenuItems();
+      
+      // Add click event listeners to each menu item
+      menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          // Get the project ID and color from data attributes
+          const projectId = this.getAttribute('data-project');
+          const colorClass = this.getAttribute('data-color');
+          
+          // Remove active class from all menu items and add to clicked item
+          menuItems.forEach(mi => mi.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Reposition menu items to center the active one
+          positionMenuItems();
+          
+          // Hide all content panels and show the selected one
+          contentPanels.forEach(panel => {
+            panel.classList.remove('active');
+            if (panel.id === projectId) {
+              panel.classList.add('active');
+            }
+          });
+        });
+      });
+      
+      // Function to position menu items vertically
+      function positionMenuItems() {
+        const menuHeight = menuContainer.offsetHeight;
+        const itemHeight = 120; // Approximate height of a menu item
+        
+        // Find the active item index
+        let activeIndex = 0;
+        menuItems.forEach((item, index) => {
+          if (item.classList.contains('active')) {
+            activeIndex = index;
+          }
+        });
+        
+        // Calculate positions to center the active item
+        const totalItems = menuItems.length;
+        const centerPosition = menuHeight / 2 - itemHeight / 2;
+        
+        // Position each item
+        menuItems.forEach((item, index) => {
+          const offset = (index - activeIndex) * itemHeight;
+          item.style.top = `${centerPosition + offset}px`;
+        });
+      }
+      
+      // Handle window resize
+      window.addEventListener('resize', positionMenuItems);
+    });
+  </script>
+
+  <!-- ======================================
+       Footer Section
+       Company information, contact details, and social links
+       ====================================== -->
+  <footer class="bg-darkgray bg-opacity-80 backdrop-blur-sm py-12 mt-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <a href="#hero" class="text-2xl font-montserrat font-medium">
+            WHATTADATA
+          </a>
+          <p class="text-sm">
+            Spin-off dell'Università di Milano-Bicocca
+          </p>
+          <p class="text-sm">
+            Trasformiamo i dati in valore
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contatti</h3>
+          <ul class="space-y-2">
+            <li class="text-sm">
+              <span class="font-medium">Email:</span>
+              <a href="mailto:info@whattadata.it" class="hover:text-secondary transition-colors duration-300">info@whattadata.it</a>
+            </li>
+            <li class="text-sm">
+              <span class="font-medium">Telefono:</span>
+              <a href="tel:+39XXXXXXXXXX" class="hover:text-secondary transition-colors duration-300">+39 XXX XXX XXXX</a>
+            </li>
+            <li class="text-sm">
+              <span class="font-medium">Indirizzo:</span>
+              <p>Università degli Studi di Milano-Bicocca</p>
+              <p>Piazza dell'Ateneo Nuovo, 1</p>
+              <p>20126 Milano (MI)</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Social</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="LinkedIn">
+              <i class="ri-linkedin-line text-xl"></i>
+            </a>
+            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="Twitter">
+              <i class="ri-twitter-line text-xl"></i>
+            </a>
+            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="GitHub">
+              <i class="ri-github-line text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-sm">
+            © 2025 WhattaData. Tutti i diritti riservati.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Termini di Servizio</a>
+            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

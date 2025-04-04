@@ -63,6 +63,7 @@
         <ul class="flex space-x-12">
           <li><a href="#about" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Chi Siamo</a></li>
           <li><a href="#projects" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Progetti</a></li>
+          <li><a href="#team" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Team</a></li>
           <li><a href="#contact" class="text-gray-600 hover:text-gray-900 font-medium nav-text-shadow">Contatti</a></li>
         </ul>
       </nav>
@@ -74,7 +75,7 @@
        Main landing area with animated typewriter effect and CTA
        ====================================== -->
   <section id="hero" class="section flex flex-col justify-end overflow-hidden relative">
-    <div class="container mx-auto px-4 pb-24 md:pb-32">
+    <div class="container mx-auto px-16 pb-24 md:pb-32">
       <!-- Hero content - Positioned at the bottom -->
         <!-- Left column - Main headline with typewriter effect -->
         <div class="space-y-6 relative z-10">
@@ -172,8 +173,101 @@
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto mb-16">
             <h2 class="text-4xl font-bold mb-8 text-center">Progetti</h2>
-            
-
+            <div class="projects-container overflow-hidden">
+              <!-- Left panel - Menu items -->
+              <div class="projects-menu" id="projectsMenu">
+                <!-- Menu items - Each associated with a different color -->
+                <div class="menu-item active" data-project="arianne" data-color="secondary">
+                    <div class="project-category pl-2 mb-1">Piattaforma Sanitaria</div>
+                  <div class="project-title title-secondary">Arianne</div>
+                </div>
+                
+                <div class="menu-item" data-project="esg-quest" data-color="accent">
+                    <div class="project-category pl-2 mb-1">Strumento di Sostenibilità</div>
+                  <div class="project-title title-accent">ESG Quest</div>
+                </div>
+                
+                <div class="menu-item" data-project="other-projects" data-color="tertiary">
+                    <div class="project-category pl-2 mb-1">Laboratorio di Innovazione</div>
+                    <div class="project-title title-tertiary">Altri Progetti</div>
+                </div>
+              </div>
+              
+              <!-- Right panel - Content panels -->
+              <div class="projects-content">
+                <!-- Arianne content panel -->
+                <div class="content-panel panel-secondary active" id="arianne">
+                  <div class="max-w-xl">              
+                    <p class="text-lg mb-4 leading-relaxed">
+                        Arianne è la nostra piattaforma sanitaria di punta, progettata per rivoluzionare l'interazione tra terapisti e professionisti sanitari con i loro pazienti. La piattaforma offre una suite completa di strumenti per le valutazioni diagnostiche, la pianificazione del trattamento e il monitoraggio del progresso.
+                    </p>
+                    
+                        <img src="https://placehold.co/600x400/CCCCCC/f5f5f5?text=Arianne&opacity=0.7" alt="Arianne Platform Dashboard" class="project-screenshot" />
+                  </div>
+                </div>
+                
+                <!-- ESG Quest content panel -->
+                <div class="content-panel panel-accent" id="esg-quest">
+                  <div class="max-w-xl">
+                      <div class="project-category pl-2 mb-1">Strumento di Sostenibilità</div>
+                    
+                    <p class="text-lg mb-4 leading-relaxed">
+                        ESG Quest è la nostra piattaforma completa di gestione della sostenibilità che aiuta le imprese a tracciare, misurare e riportare i loro indicatori ambientali, sociali e di governance con una precisione e accuratezza senza precedenti.
+                    
+                        <img src="https://placehold.co/600x400/CCCCCC/f5f5f5?text=ESG+Quest&opacity=0.7" alt="ESG Quest Dashboard" class="project-screenshot" />
+                  </div>
+                </div>
+                
+                <!-- Other Projects content panel -->
+                <div class="content-panel panel-tertiary" id="other-projects">
+                  <div class="max-w-xl">
+                      <div class="project-category pl-2 mb-1">Laboratorio di Innovazione</div>
+                    
+                    <p class="text-lg mb-4 leading-relaxed">
+                        Il nostro laboratorio di innovazione esplora costantemente nuovi orizzonti in scienze dei dati, machine learning e design dell'esperienza utente. Questi progetti sperimentali spesso diventano la base per i nostri prodotti di prossima generazione.
+                    </p>
+                    
+                    <div class="project-logo-grid">
+                      <!-- Project 1 -->
+                      <div class="project-logo-item">
+                          <img src="https://placehold.co/80x80/CCCCCC/f5f5f5?text=DataViz+Pro&opacity=0.7" alt="Logo DataViz Pro" class="project-logo" />
+                        <h4 class="font-semibold mb-2">DataViz Pro</h4>
+                        <p class="project-logo-description">
+                            Un'immersiva tool di visualizzazione dei dati che trasforma i dataset complessi in ambienti interattivi 3D per un'esplorazione e analisi intuitiva.
+                        </p>
+                      </div>
+                      
+                      <!-- Project 2 -->
+                      <div class="project-logo-item">
+                          <img src="https://placehold.co/80x80/CCCCCC/f5f5f5?text=AI+Forecast&opacity=0.7" alt="Logo AI Forecast" class="project-logo" />
+                        <h4 class="font-semibold mb-2">AI Forecast</h4>
+                        <p class="project-logo-description">
+                            Piattaforma di analisi predittiva che combina più modelli di machine learning per fornire previsioni aziendali altamente accurate.
+                        </p>
+                      </div>
+                      
+                      <!-- Project 3 -->
+                      <div class="project-logo-item">
+                          <img src="https://placehold.co/80x80/CCCCCC/f5f5f5?text=BlockChain+Verify&opacity=0.7" alt="Logo BlockChain Verify" class="project-logo" />
+                        <h4 class="font-semibold mb-2">BlockChain Verify</h4>
+                        <p class="project-logo-description">
+                            Sistema di verifica documenti sicuro utilizzando la tecnologia blockchain per garantire l'integrità e l'autenticità dei dati.
+                        </p>
+                      </div>
+                      
+                      <!-- Project 4 -->
+                      <div class="project-logo-item">
+                          <img src="https://placehold.co/80x80/CCCCCC/f5f5f5?text=NLP+Insights&opacity=0.7" alt="Logo NLP Insights" class="project-logo" />
+                        <h4 class="font-semibold mb-2">NLP Insights</h4>
+                        <p class="project-logo-description">
+                            Strumento di elaborazione del linguaggio naturale che estrae informazioni azionabili dai feedback dei clienti, recensioni e social media.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -258,6 +352,80 @@
           </div>
         </div>
       </section>
+
+
+  <!-- ======================================
+       Footer Section
+       Company information, contact details, and social links
+       ====================================== -->
+  <footer class="bg-darkgray bg-opacity-80 backdrop-blur-sm py-12 mt-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <a href="#hero" class="text-2xl font-montserrat font-medium">
+            WHATTADATA
+          </a>
+          <p class="text-sm">
+            Spin-off dell'Università di Milano-Bicocca
+          </p>
+          <p class="text-sm">
+            Trasformiamo i dati in valore
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contatti</h3>
+          <ul class="space-y-2">
+            <li class="text-sm">
+              <span class="font-medium">Email:</span>
+              <a href="mailto:info@whattadata.it" class="hover:text-secondary transition-colors duration-300">info@whattadata.it</a>
+            </li>
+            <li class="text-sm">
+              <span class="font-medium">Telefono:</span>
+              <a href="tel:+39XXXXXXXXXX" class="hover:text-secondary transition-colors duration-300">+39 XXX XXX XXXX</a>
+            </li>
+            <li class="text-sm">
+              <span class="font-medium">Indirizzo:</span>
+              <p>Università degli Studi di Milano-Bicocca</p>
+              <p>Piazza dell'Ateneo Nuovo, 1</p>
+              <p>20126 Milano (MI)</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Social</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="LinkedIn">
+              <i class="ri-linkedin-line text-xl"></i>
+            </a>
+            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="GitHub">
+              <i class="ri-github-line text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-sm">
+            © 2025 WhattaData. Tutti i diritti riservati.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Termini di Servizio</a>
+            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
 
   <!-- ======================================
        JavaScript Functionality
@@ -379,79 +547,3 @@
       window.addEventListener('resize', positionMenuItems);
     });
   </script>
-
-  <!-- ======================================
-       Footer Section
-       Company information, contact details, and social links
-       ====================================== -->
-  <footer class="bg-darkgray bg-opacity-80 backdrop-blur-sm py-12 mt-16">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Company Info -->
-        <div class="space-y-4">
-          <a href="#hero" class="text-2xl font-montserrat font-medium">
-            WHATTADATA
-          </a>
-          <p class="text-sm">
-            Spin-off dell'Università di Milano-Bicocca
-          </p>
-          <p class="text-sm">
-            Trasformiamo i dati in valore
-          </p>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Contatti</h3>
-          <ul class="space-y-2">
-            <li class="text-sm">
-              <span class="font-medium">Email:</span>
-              <a href="mailto:info@whattadata.it" class="hover:text-secondary transition-colors duration-300">info@whattadata.it</a>
-            </li>
-            <li class="text-sm">
-              <span class="font-medium">Telefono:</span>
-              <a href="tel:+39XXXXXXXXXX" class="hover:text-secondary transition-colors duration-300">+39 XXX XXX XXXX</a>
-            </li>
-            <li class="text-sm">
-              <span class="font-medium">Indirizzo:</span>
-              <p>Università degli Studi di Milano-Bicocca</p>
-              <p>Piazza dell'Ateneo Nuovo, 1</p>
-              <p>20126 Milano (MI)</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Social Links -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Social</h3>
-          <div class="flex space-x-4">
-            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="LinkedIn">
-              <i class="ri-linkedin-line text-xl"></i>
-            </a>
-            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="Twitter">
-              <i class="ri-twitter-line text-xl"></i>
-            </a>
-            <a href="#" class="hover:text-secondary transition-colors duration-300" aria-label="GitHub">
-              <i class="ri-github-line text-xl"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="border-t border-gray-700 mt-12 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-sm">
-            © 2025 WhattaData. Tutti i diritti riservati.
-          </p>
-          <div class="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Privacy Policy</a>
-            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Termini di Servizio</a>
-            <a href="#" class="hover:text-secondary text-sm transition-colors duration-300">Cookie Policy</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
